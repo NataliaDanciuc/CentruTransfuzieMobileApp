@@ -16,17 +16,17 @@ namespace CentruTransfuzieMobileApp.Data
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<MedicalTest>().Wait();
         }
-        public Task<List<MedicalTest>> GetShopListsAsync()
+        public Task<List<MedicalTest>> GetMedicalTestsAsync()
         {
             return _database.Table<MedicalTest>().ToListAsync();
         }
-        public Task<MedicalTest> GetShopListAsync(int id)
+        public Task<MedicalTest> GetMedicalTestAsync(int id)
         {
             return _database.Table<MedicalTest>()
             .Where(i => i.ID == id)
            .FirstOrDefaultAsync();
         }
-        public Task<int> SaveShopListAsync(MedicalTest mlist)
+        public Task<int> SaveMedicalTestAsync(MedicalTest mlist)
         {
             if (mlist.ID != 0)
             {
@@ -37,7 +37,7 @@ namespace CentruTransfuzieMobileApp.Data
                 return _database.InsertAsync(mlist);
             }
         }
-        public Task<int> DeleteShopListAsync(MedicalTest mlist)
+        public Task<int> DeleteMedicalTestAsync(MedicalTest mlist)
         {
             return _database.DeleteAsync(mlist);
         }
