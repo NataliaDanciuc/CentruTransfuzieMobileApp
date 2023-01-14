@@ -6,7 +6,7 @@
     <StackLayout Margin="20">
         <Editor Placeholder="Enter the description of the medical tests"
                 Text="{Binding Description}"
-                HeightRequest="100" />
+                HeightRequest="50" />
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -17,6 +17,18 @@
             <Button Grid.Column="1"
                     Text="Delete"
                     Clicked="OnDeleteButtonClicked"/>
+            
+            
         </Grid>
+        <ListView x:Name="listView"
+                    Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add/Choose Service to make appointment" MaximumWidthRequest="300"
+                    Clicked="OnChooseButtonClicked"/>
     </StackLayout>
 </ContentPage>

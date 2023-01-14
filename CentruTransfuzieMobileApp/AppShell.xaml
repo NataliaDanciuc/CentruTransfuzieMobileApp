@@ -8,7 +8,7 @@
 
     <TabBar>
         <ShellContent
-            Title="Medical test Lists"
+            Title="Blood Transfusion Center"
             ContentTemplate="{DataTemplate local:MainPage}"
         />
         <ShellContent
@@ -19,6 +19,7 @@
             Title="My Medical Tests"
             ContentTemplate="{DataTemplate local:TestEntryPage}"
  />
-    </TabBar>
+    </TabBar>
+
 
 </Shell>
