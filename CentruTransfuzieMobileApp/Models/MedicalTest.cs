@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace CentruTransfuzieMobileApp.Models
 {
@@ -14,5 +15,7 @@ namespace CentruTransfuzieMobileApp.Models
         public int ID { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        [ForeignKey(typeof(Center))]
+        public int CenterID { get; set; }
     }
 }

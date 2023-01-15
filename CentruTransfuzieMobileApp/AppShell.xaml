@@ -18,6 +18,10 @@
         <ShellContent
             Title="My Medical Tests"
             ContentTemplate="{DataTemplate local:TestEntryPage}"
+            />
+        <ShellContent
+            Title="My Centers"
+            ContentTemplate="{DataTemplate local:CenterEntryPage}"
  />
     </TabBar>
 
